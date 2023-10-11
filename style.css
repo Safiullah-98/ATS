@@ -10,19 +10,51 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #3d8b8894;
-    color: #fff;
+/* .cool-header {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+} */
+
+.logo img {
+    max-width: 100px; /* Adjust the maximum width as needed */
+}
+ /* .cool-header {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+ } */
+
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Double the width for two images */
+    height: 100%;
+    z-index: -1;
+    animation: flow 20s linear infinite;
+    background-image: url('/img/xz.jpeg'), url('/img/b.jpeg'); /* Use multiple images */
+    background-size: 50% 100%; /* Adjust the size to fit two images */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
     text-align: center;
-    padding: 2rem 0;
+    padding-top: 20%;
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
+@keyframes flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 /* Add background color to the "features" section */
@@ -130,3 +162,21 @@ footer {
     color: #fff;
     padding: 1rem 0;
 }
+
+
+/* image sliding div */
+.image-slider {
+    text-align: center;
+}
+
+.image-slider img {
+    max-width: 100%;
+    display: none;
+}
+
+.image-slider img:first-child {
+    display: block;
+}
+
+
+/* image sliding div */
